@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#6c5ce7">
+  <meta name="description" content="عالم المرح — 15 لعبة تعليمية آمنة وممتعة للأطفال من 6 إلى 8 سنوات.">
+  <meta name="color-scheme" content="light">
+  <title>عالم المرح | ألعاب ومغامرات صغيرة</title>
+  <link rel="icon" href="assets/mascot.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-decor decor-a" aria-hidden="true">✦</div><div class="sky-decor decor-b" aria-hidden="true">☁</div><div class="sky-decor decor-c" aria-hidden="true">✿</div>
+  <header class="topbar">
+    <a class="brand" href="#home" id="brandHome" aria-label="عالم المرح، الصفحة الرئيسية"><span class="brand-mark">🌈</span><span class="brand-copy"><b>عالم المرح</b><small>كل يوم مغامرة جديدة</small></span></a>
+    <div class="top-actions">
+      <div class="star-wallet" title="مجموع النجوم التي جمعتها"><span>⭐</span><b id="totalStars">0</b><small>نجمة</small></div>
+      <button class="icon-button sound-toggle" id="soundToggle" type="button" aria-pressed="false" aria-label="تشغيل المؤثرات الصوتية" title="المؤثرات الصوتية"><span id="soundIcon">🔇</span><span class="sound-label">المؤثرات</span></button><button class="icon-button music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="تشغيل موسيقى الخلفية" title="موسيقى الخلفية"><span id="musicIcon">🎵</span><span class="sound-label">الموسيقى</span></button>
+      <button class="icon-button" id="helpButton" type="button" aria-label="طريقة اللعب" title="مساعدة">❔</button>
+    </div>
+  </header>
+
+  <main id="homeView" class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> مساحة صغيرة للخيال الكبير</div>
+        <h1>أهلًا يا <span class="rainbow-text">بطل!</span></h1>
+        <p>هنا نلعب ونفكّر ونكتشف أشياء جديدة. اختر مغامرتك، واجمع النجوم، والأهم… استمتع! 🚀</p>
+        <button class="primary-button" id="exploreButton" type="button">هيا نلعب <span>←</span></button>
+        <div class="hero-facts"><span>🧠 نفكّر</span><span>🎨 نكتشف</span><span>💛 نتعلّم باللعب</span></div>
+      </div>
+      <div class="hero-art" aria-label="شخصية مرحة ترحّب بالأطفال">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="floaty floaty-star">⭐</span><span class="floaty floaty-heart">💖</span><span class="floaty floaty-cloud">☁️</span>
+        <div class="mascot"><div class="mascot-top">〰</div><div class="mascot-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="cheek cheek-left"></i><i class="cheek cheek-right"></i><i class="mascot-smile"></i></div><div class="mascot-body">✦</div><div class="mascot-arm arm-left"></div><div class="mascot-arm arm-right"></div><div class="mascot-foot foot-left"></div><div class="mascot-foot foot-right"></div></div>
+        <div class="speech-bubble">أنا لولو! لنلعب معًا <span>✨</span></div>
+      </div>
+    </section>
+
+    <section class="daily-card" aria-label="رسالة اليوم"><div class="daily-emblem">🏆</div><div class="daily-copy"><b id="dailyTitle">مهمّة اليوم: جرّب شيئًا جديدًا!</b><p id="dailyText">كل محاولة تعلّمنا شيئًا، وكل لعبة فرصة للمرح.</p></div><div class="daily-sparkles" aria-hidden="true">✦　✧　✦</div></section>
+
+    <section class="games-section" id="games" aria-labelledby="gamesTitle">
+      <div class="section-heading"><div><span class="section-kicker">عالم مليء بالمفاجآت</span><h2 id="gamesTitle">اختر مغامرتك <span>🎮</span></h2></div><span class="games-count"><b>8</b> ألعاب ممتعة <span>💜</span></span></div>
+      <div class="game-filters" role="group" aria-label="تصفية الألعاب حسب المهارة">
+        <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">🌈 كل الألعاب <span>15</span></button>
+        <button type="button" class="filter-chip" data-filter="arabic" aria-pressed="false">📚 اللغة العربية</button>
+        <button type="button" class="filter-chip" data-filter="english" aria-pressed="false">🔤 English</button>
+        <button type="button" class="filter-chip" data-filter="math" aria-pressed="false">🔢 الرياضيات</button>
+        <button type="button" class="filter-chip" data-filter="fun" aria-pressed="false">🎮 المرح والذكاء</button>
+      </div>
+      <div class="games-grid" id="gamesGrid">
+        <button class="game-card game-bubbles" data-game="bubbles" data-category="fun" type="button"><span class="card-number">01</span><span class="game-art"><i>🫧</i><b>🎈</b><em>🎈</em><small>✦</small></span><span class="game-info"><strong>فقّع البالونات</strong><small>فرقعها واجمع النقاط!</small><span class="game-meta"><span>⚡ حركة</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-memory" data-game="memory" data-category="fun" type="button"><span class="card-number">02</span><span class="game-art"><i>🦊</i><b>🐸</b><em>❔</em></span><span class="game-info"><strong>ذاكرة الأبطال</strong><small>اعثر على الأزواج المتشابهة.</small><span class="game-meta"><span>🧠 تركيز</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-catcher" data-game="catcher" data-category="fun" type="button"><span class="card-number">03</span><span class="game-art"><i>⭐</i><b>🧺</b><em>✨</em></span><span class="game-info"><strong>صائد النجوم</strong><small>التقط النجوم بسلتك.</small><span class="game-meta"><span>🎯 مهارة</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-quiz" data-game="quiz" data-category="fun" type="button"><span class="card-number">04</span><span class="game-art"><i>🔺</i><b>🔵</b><em>🟨</em></span><span class="game-info"><strong>ألوان وأشكال</strong><small>هل تعرفها كلّها؟</small><span class="game-meta"><span>🎨 تعلّم</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-math" data-game="math" data-category="math" type="button"><span class="card-number">05</span><span class="game-art"><i>🍎</i><b>🔢</b><em>➕</em></span><span class="game-info"><strong>سفاري الأرقام</strong><small>عدّ الأشياء وحلّ أسئلة سهلة.</small><span class="game-meta"><span>🔢 أرقام</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-letters" data-game="letters" data-category="arabic" type="button"><span class="card-number">06</span><span class="game-art"><i>🦁</i><b>أ</b><em>📚</em></span><span class="game-info"><strong>حروف وكلمات</strong><small>ما الحرف الأول من الصورة؟</small><span class="game-meta"><span>🔤 لغة</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-pattern" data-game="pattern" data-category="fun" type="button"><span class="card-number">07</span><span class="game-art"><i>🔵</i><b>🟡</b><em>🔵</em></span><span class="game-info"><strong>أكمل النمط</strong><small>اكتشف ما الذي يأتي بعد ذلك.</small><span class="game-meta"><span>🧩 ذكاء</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-sort" data-game="sorting" data-category="fun" type="button"><span class="card-number">08</span><span class="game-art"><i>🧸</i><b>🧺</b><em>🟣</em></span><span class="game-info"><strong>صندوق الفرز</strong><small>ضع كل غرض في سلّته الصحيحة.</small><span class="game-meta"><span>🧺 تصنيف</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-arabic-words" data-game="arabicWords" data-category="arabic" type="button"><span class="card-number">09</span><span class="game-art"><i>🐱</i><b>أ</b><em>📖</em></span><span class="game-info"><strong>اقرأ واختر</strong><small>اربط الصورة بالكلمة العربية.</small><span class="game-meta"><span>📚 قراءة</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-arabic-missing" data-game="arabicMissing" data-category="arabic" type="button"><span class="card-number">10</span><span class="game-art"><i>✏️</i><b>؟</b><em>📝</em></span><span class="game-info"><strong>الحرف المفقود</strong><small>أكمل الكلمة بالحرف الصحيح.</small><span class="game-meta"><span>🔡 إملاء</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-english-listen" data-game="englishListen" data-category="english" type="button"><span class="card-number">11</span><span class="game-art"><i>🔊</i><b>A</b><em>🐶</em></span><span class="game-info"><strong>Listen &amp; Pick</strong><small>استمع للكلمة الإنجليزية واختر الصورة.</small><span class="game-meta"><span>👂 استماع</span><span class="play-link">Play ←</span></span></span></button>
+        <button class="game-card game-english-spell" data-game="englishSpell" data-category="english" type="button"><span class="card-number">12</span><span class="game-art"><i>🍎</i><b>ABC</b><em>✨</em></span><span class="game-info"><strong>Spell the Word</strong><small>اكتشف الحرف الناقص في الكلمة.</small><span class="game-meta"><span>🔤 تهجئة</span><span class="play-link">Play ←</span></span></span></button>
+        <button class="game-card game-arithmetic" data-game="arithmetic" data-category="math" type="button"><span class="card-number">13</span><span class="game-art"><i>🍓</i><b>➕</b><em>➖</em></span><span class="game-info"><strong>مملكة الجمع والطرح</strong><small>حلّ مسائل حتى العدد 20.</small><span class="game-meta"><span>🧮 حساب</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-sequence" data-game="sequence" data-category="math" type="button"><span class="card-number">14</span><span class="game-art"><i>🔢</i><b>…</b><em>🧩</em></span><span class="game-info"><strong>قطار الأعداد</strong><small>أكمل التسلسل العددي الناقص.</small><span class="game-meta"><span>🚂 تسلسل</span><span class="play-link">العب ←</span></span></span></button>
+        <button class="game-card game-compare" data-game="compare" data-category="math" type="button"><span class="card-number">15</span><span class="game-art"><i>🐘</i><b>&gt;</b><em>🐭</em></span><span class="game-info"><strong>من الأكبر؟</strong><small>قارن الأعداد واختر الأكبر أو الأصغر.</small><span class="game-meta"><span>⚖️ مقارنة</span><span class="play-link">العب ←</span></span></span></button>
+      </div>
+    </section>
+
+    <section class="learning-paths" aria-labelledby="learningPathsTitle">
+      <div class="section-heading compact-heading"><div><span class="section-kicker">نتعلّم خطوةً خطوة</span><h2 id="learningPathsTitle">مسارات التعلّم <span>🗺️</span></h2></div><span class="games-count">تقدّمك محفوظ على جهازك 💾</span></div>
+      <div class="paths-grid">
+        <article class="path-card path-arabic" data-path="arabic"><div class="path-icon">📚</div><div class="path-copy"><strong>مغامرة العربية</strong><small>الحروف والقراءة وإكمال الكلمات</small><div class="path-progress"><span></span></div><b class="path-count">0 من 3 ألعاب</b></div></article>
+        <article class="path-card path-english" data-path="english"><div class="path-icon">🔤</div><div class="path-copy"><strong>English Explorer</strong><small>الاستماع والمفردات والتهجئة</small><div class="path-progress"><span></span></div><b class="path-count">0 من 2 لعبتين</b></div></article>
+        <article class="path-card path-math" data-path="math"><div class="path-icon">🔢</div><div class="path-copy"><strong>أبطال الرياضيات</strong><small>العدّ والجمع والطرح ومقارنة الأعداد</small><div class="path-progress"><span></span></div><b class="path-count">0 من 4 ألعاب</b></div></article>
+      </div>
+      <p class="paths-note">تتقدّم المسارات عندما تنهي لعبة من المجال نفسه. لا توجد درجات فشل؛ كل تجربة تمنحك فرصة للتعلّم 🌱</p>
+    </section>
+    <section class="progress-section"><div class="progress-mascot">🦄</div><div class="progress-copy"><span class="section-kicker">إنجازاتك الصغيرة تصنع فرقًا</span><h2>لوحة أبطال عالم المرح</h2><p>كل لعبة تلعبها تضيف لمغامرتك ذكرى جديدة. أنت تتقدّم بطريقتك الخاصة!</p><div class="achievement-chips"><span id="gamesPlayedChip">🎮 0 جولة</span><span id="bestGamesChip">🏅 0 أرقام قياسية</span><span id="badgeChip">🏵️ 0 أوسمة</span></div></div><div class="progress-total"><b id="rewardStars">0</b><small>نجمة جمعتها ⭐</small></div></section>
+    <section class="badges-section"><div class="section-heading compact-heading"><div><span class="section-kicker">كل إنجاز يستحق الاحتفال</span><h2>أوسمتي <span>🏵️</span></h2></div></div><div class="badges-grid" id="badgesGrid"></div></section>
+    <footer class="site-footer"><span>صُنع بالكثير من الحب 💜</span><span>لا توجد مشتريات أو إعلانات داخل اللعبة</span></footer>
+  </main>
+
+  <main id="gameView" class="game-page hidden" aria-live="polite">
+    <div class="game-topline"><button class="back-button" id="backHome" type="button"><span>→</span> القائمة الرئيسية</button><div class="playing-label"><span class="playing-dot"></span> وقت المغامرة!</div><button class="restart-button" id="restartGame" type="button" aria-label="إعادة بدء اللعبة">↻ <span>من جديد</span></button></div>
+    <section class="game-panel">
+      <div class="game-heading"><div class="game-heading-icon" id="activeGameIcon">🎈</div><div class="game-title-wrap"><h1 id="activeGameTitle">فقّع البالونات</h1><p id="activeGameSub">المس البالونات واجمع أكبر عدد من النقاط!</p></div><div class="score-box"><span>نقاطك ⭐</span><strong id="currentScore">0</strong></div></div>
+      <div class="game-status"><div class="timer-wrap"><span>⏱️</span><span id="timerLabel">الوقت</span><strong id="timerValue">30</strong></div><div class="progress-wrap"><div class="progress-label"><span id="progressLabel">جاهز؟</span><span id="progressValue">0%</span></div><div class="progress-track"><div id="progressBar" class="progress-bar"></div></div></div><div class="best-score">🏅 أفضل نتيجة <strong id="bestScore">0</strong></div></div>
+      <div class="playfield" id="playfield" tabindex="-1" aria-label="مساحة اللعب"><div class="game-intro" id="gameIntro"><div class="intro-emoji" id="introEmoji">🎈</div><h2 id="introTitle">جاهز للمرح؟</h2><p id="introText">اضغط الزر لنبدأ مغامرتنا!</p><button class="start-button" id="startGame" type="button">ابدأ اللعب <span>✨</span></button></div></div>
+      <div class="game-hint" id="gameHint">💡 كل محاولة تدريب جديد. أنت تستطيع!</div>
+    </section>
+    <div class="game-bottom-note"><span>🌈</span> تذكّر: المهم أن تستمتع وتحاول، وليس أن تكون الأسرع دائمًا! <span>💛</span></div>
+  </main>
+
+  <div class="result-modal hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="result-card"><div class="result-ribbon">أحسنت يا بطل!</div><div class="result-emoji" id="resultEmoji">🏆</div><h2 id="resultTitle">أنت نجم رائع!</h2><p id="resultMessage">لقد قضيت وقتًا ممتعًا.</p><div class="result-points"><span>نجوم هذه الجولة</span><strong id="earnedStars">0 ⭐</strong></div><div class="new-badge hidden" id="newBadge">🏵️ وسام جديد!</div><div class="result-actions"><button id="playAgain" class="start-button" type="button">العب مرة أخرى ↻</button><button id="resultHome" class="secondary-button" type="button">العودة للقائمة 🏠</button></div><div class="result-sparkles" aria-hidden="true">✨　🌟　✨</div></div></div>
+  <div class="help-modal hidden" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="help-card"><button class="modal-close" id="closeHelp" type="button" aria-label="إغلاق">×</button><div class="help-big">🧚‍♀️</div><h2 id="helpTitle">مرحبًا في عالم المرح!</h2><p>اختر لعبة تعجبك: اقرأ بالعربية، واستمع إلى الإنجليزية، وتدرّب على الجمع والطرح. اجمع النجوم وتعلّم في كل محاولة!</p><div class="help-items"><span>👆 المس للّعب</span><span>🔊 مؤثرات وموسيقى اختيارية</span><span>💾 تقدّمك محفوظ على هذا الجهاز</span></div><button class="start-button" id="helpOkay" type="button">فهمت، لننطلق! 🚀</button></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
+  <script src="game.js" defer></script>
+</body>
+</html>

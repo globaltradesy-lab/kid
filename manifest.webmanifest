@@ -1,0 +1,13 @@
+{
+  "name": "عالم المرح — ألعاب للأطفال",
+  "short_name": "عالم المرح",
+  "description": "15 لعبة عربية وإنجليزية ورياضية للأطفال من 6 إلى 8 سنوات",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbfaff",
+  "theme_color": "#6c5ce7",
+  "icons": [{ "src": "./assets/mascot.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
